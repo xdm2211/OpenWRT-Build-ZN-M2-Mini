@@ -11,25 +11,14 @@ on:
         required: true
         type: choice
         options:
-          - MEDIATEK
-          - ROCKCHIP
-          - X86
-          - IPQ50XX-WIFI-YES
-          - IPQ50XX-WIFI-NO
           - IPQ60XX-WIFI-YES
           - IPQ60XX-WIFI-NO
-          - IPQ807X-WIFI-YES
-          - IPQ807X-WIFI-NO
-          - TEST
       SOURCE:
         default: 'VIKINGYFY/immortalwrt'
         required: true
         type: choice
         options:
           - VIKINGYFY/immortalwrt
-          - immortalwrt/immortalwrt
-          - LiBwrt/openwrt-6.x
-          - qosmio/openwrt-ipq
       BRANCH:
         default: 'main'
         required: true
@@ -58,15 +47,15 @@ jobs:
       #默认主题
       WRT_THEME: argon
       #默认主机名
-      WRT_NAME: OWRT
+      WRT_NAME: OpenWRT
       #默认WIFI名称
-      WRT_SSID: OWRT
+      WRT_SSID: WRT
       #默认WIFI密码
       WRT_WORD: 12345678
       #默认地址
-      WRT_IP: 192.168.10.1
+      WRT_IP: 192.168.1.1
       #默认密码，仅作提示，修改无用
-      WRT_PW: 无
+      WRT_PW: password
       #源码链接
       WRT_REPO: https://github.com/${{inputs.SOURCE}}.git
       #源码分支
