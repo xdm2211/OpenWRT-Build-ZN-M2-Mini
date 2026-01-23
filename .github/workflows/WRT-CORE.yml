@@ -228,11 +228,11 @@ jobs:
           tag_name: ${{env.WRT_CONFIG}}-${{env.WRT_INFO}}-${{env.WRT_BRANCH}}-${{env.WRT_DATE}}
           files: ./wrt/upload/*.*
           body: |
-            这是个平台固件包，内含多个设备！
+            这是个ZN-M2、AX18设备固件包！
             请注意选择你需要的设备固件！
-            不要问，刷就完事了！
+            不带WiFi 不带usb，弱电箱专用！支持原版256M及以上内存的设备！
 
-            全系带开源硬件加速，别问了！
+            带开源硬件加速！
 
             源码：${{env.WRT_REPO}}
             分支：${{env.WRT_BRANCH}}
@@ -242,10 +242,10 @@ jobs:
             平台：${{env.WRT_TARGET}}
 
             登录地址：${{env.WRT_IP}}
-            登录密码：${{env.WRT_PW}}
+            登录密码：${{env.WRT_PW}}    （或者password）
 
-            WIFI名称：${{env.WRT_SSID}}
-            WIFI密码：${{env.WRT_WORD}}
+            WIFI名称：${{env.WRT_SSID}}  （无WiFi版本没有）
+            WIFI密码：${{env.WRT_WORD}}  （无WiFi版本没有）
 
             内核版本：${{env.WRT_KVER}}
             插件列表：${{env.WRT_LIST}}
